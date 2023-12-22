@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="./js/index.js" defer></script>
+    <meta charset="UTF-8" />
+    <title>Inofficial neue fische Web Development Script</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="#toc">Table of content</a>
+        <a href="#week-1">Week 1</a>
+        <a href="#week-2">Week 2</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Inofficial neue fische <br />Web Development Script</h1>
+      <section>
+        <h1 id="table-of-contents">Table of contents</h1>
+        <h2 id="week-1">Week 1</h2>
+        <ul>
+          <li>Github and Markdown</li>
+          <li>HTML and the Web</li>
+          <li>CSS Basics</li>
+          <li>CSS Flexbox</li>
+        </ul>
+      </section>
+      <hr />
+      <hr />
+      <section>
+        <h1 id="github-and-markdown">GitHub and Markdown</h1>
+        <h2 id="learning-objectives">Learning Objectives</h2>
+        <ul>
+          <li>
+            learning what version control is and why it is useful / important
+          </li>
+          <li>creating repositories on GitHub</li>
+          <li>creating / editing files on GitHub</li>
+          <li>creating commits on GitHub</li>
+          <li>learning what Markdown is</li>
+          <li>writing Markdown</li>
+        </ul>
+        <hr />
+        <h2 id="markdown">Markdown</h2>
+        <p>
+          The Markdown syntax allows writing formatted text (headlines,
+          blockquotes, lists, etc.) that can be stored in plain text. It is used
+          by tools and websites like GitHub or Slack. It uses specific
+          characters to format parts of the text in a certain way.
+        </p>
+        <h3 id="markdown-examples">Markdown Examples</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Markdown Syntax</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Level 1 headline</td>
+              <td><code># Level 1 headline</code></td>
+            </tr>
+            <tr>
+              <td>Level 2 headline</td>
+              <td><code>## Level 2 headline</code></td>
+            </tr>
+            <tr>
+              <td>Level 5 headline</td>
+              <td><code>##### Level 5 headline</code></td>
+            </tr>
+            <tr>
+              <td>list item</td>
+              <td><code>- list item</code></td>
+            </tr>
+            <tr>
+              <td>[ ] done</td>
+              <td><code>[ ] checkbox</code></td>
+            </tr>
+            <tr>
+              <td>[x] done</td>
+              <td><code>[x] checkbox</code></td>
+            </tr>
+            <tr>
+              <td><strong>bold text</strong></td>
+              <td><code>**bold text**</code></td>
+            </tr>
+            <tr>
+              <td><em>italicized text</em></td>
+              <td><code>_italicized text_</code></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.example.com">link</a></td>
+              <td><code>[link text](https://www.example.com)</code></td>
+            </tr>
+            <tr>
+              <td>image</td>
+              <td><code>![description of image](url to image)</code></td>
+            </tr>
+            <tr>
+              <td>block quote</td>
+              <td><code>&gt; block quote</code></td>
+            </tr>
+            <tr>
+              <td>divider</td>
+              <td><code>---</code></td>
+            </tr>
+            <tr>
+              <td><code>inline code block</code></td>
+              <td><code>`inline code block`</code></td>
+            </tr>
+            <tr>
+              <td><code>code block</code></td>
+              <td><code>``` code block ```</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          See this
+          <a
+            href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+            >Markdown Cheatsheet</a
+          >
+          for more Markdown Syntax.
+        </p>
+        <hr />
+        <h2 id="git--commits">Git &amp; Commits</h2>
+        <p>Git is an open source version control system that:</p>
+        <ul>
+          <li>keeps track of all changes made to the source code</li>
+          <li>
+            enables developers to easily collaborate on the same project and
+            exchange updates
+          </li>
+          <li>
+            enables developers to go back to earlier versions of the source code
+          </li>
+        </ul>
+        <h3 id="git-repositories">Git Repositories</h3>
+        <p>
+          A Git repository is a place where a project is being saved. It keeps
+          track of all versions of the project files. Many people can have
+          access to (and work on) the same repository.
+        </p>
+        <h3 id="commits">Commits</h3>
+        <p>
+          A commit is a <strong>snapshot of your repository</strong> at a
+          specific point in time. Creating a commit in your project is similar
+          to hitting the <strong>save</strong> button in a video game.
+        </p>
+        <p>
+          You can always <strong>go back to any prior commit</strong> and will
+          have all the project files as they were when you made the commit.
+        </p>
+        <p>
+          Each commit has a message which should include a descriptive text, so
+          that you and other developers will know what changes the commit
+          includes.
+        </p>
+        <h3 id="good-commit-messages">Good commit messages</h3>
+        <p>
+          Writing good commit message is an art form in itself. Try to stick to
+          the following rules:
+        </p>
+        <ul>
+          <li>Be short and descriptive</li>
+          <li>Always use english</li>
+          <li>
+            The first word should be a verb: &quot;add&quot;, &quot;fix&quot;,
+            &quot;remove&quot;, etc.
+          </li>
+          <li>
+            Use imperative and present tense: &quot;add shop page&quot; instead
+            of &quot;added shop page&quot;
+          </li>
+          <li>Do not end your commit message with a period</li>
+          <li>
+            When in doubt, describe <strong>why</strong> you did something
+            instead of <strong>how</strong>: &quot;fix typo&quot; instead of
+            &quot;replaced the letter a with an e in the second word&quot;
+          </li>
+        </ul>
+        <p>
+          Your commit messages are a protocol of all changes made to the code
+          base. Other developers should be able to understand what happened by
+          reading the commit messages.
+        </p>
+        <hr />
+        <h2 id="github">GitHub</h2>
+        <p>
+          GitHub is an online platform where you can store, share and
+          collaborate on <strong>remote</strong> git repositories. With GitHub,
+          the same codebase can be shared and edited across many collaborators.
+          Many repositories are open source, so you can view the code, create a
+          copy, modify it or use it in your own projects.
+        </p>
+        <blockquote>
+          <p>
+            💡 Hint: Check out this huge
+            <a href="https://github.com/pawelborkar/awesome-repos"
+              >list of GitHub repositories</a
+            >
+            and see what you can find there.
+          </p>
+        </blockquote>
+        <p>
+          At the same time GitHub is a social network for developers and
+          companies. Your GitHub profile will be a valuable public asset for
+          your future career. You can get in contact with many open source
+          projects, developers and even companies via GitHub.
+        </p>
+        <blockquote>
+          <p>
+            💡 Even though GitHub is the most popular online git platform, it is
+            by far not the only one. There are several alternatives to GitHub,
+            i.e Gitlab or Bitbucket.
+          </p>
+        </blockquote>
+      </section>
+      <br />
+      <br />
+
+      <hr />
+      <h2 id="resources">Resources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+            >Markdown Cheatsheet</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme"
+            >GitHub Profile Readme</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/abhisheknaiidu/awesome-github-profile-readme"
+            >List of awesome GitHub profile readmes</a
+          >
+        </li>
+      </ul>
+      <hr />
+      <hr />
+      <h1 id="html-and-the-web">HTML and the web</h1>
+      <h2 id="learning-objectives-1">Learning Objectives</h2>
+      <ul>
+        <li>understanding client/server communication</li>
+        <li>writing HTML code</li>
+        <li>knowing about the importance of semantic HTML</li>
+      </ul>
+      <hr />
+      <h2 id="how-the-web-works">How the web works</h2>
+      <p>
+        The world wide web is a network of computers that can exchange
+        information with each other. There are many different protocols that
+        define the rules on how machines communicate. Browsers use HTTP
+        (Hypertext Transfer Protocol) to communicate with web servers.
+      </p>
+      <ul>
+        <li>
+          The URL (Uniform Resource Locator) is the unique address of a resource
+          on the web contains a human readable domain name, that needs to be
+          resolved to the technical IP (Internet Protocol) address of the web
+          server via a DNS (Domain Name Server)
+        </li>
+        <li>
+          The browser sends a <strong>GET</strong> (that&#39;s an HTTP method)
+          <strong>request</strong> to load a HTML (Hyper Text Markup Language)
+          document from a web server
+        </li>
+        <li>
+          The web server sends a <strong>response</strong> containing the
+          document
+        </li>
+        <li>
+          Often the HTML code contains references to additional resources (CSS
+          (Cascading Style Sheet) files, images, etc.), which the browser then
+          also requests from the server
+        </li>
+        <li>
+          The browser <strong>renders</strong> the received content to the
+          screen and makes it interactive
+        </li>
+        <li>
+          Browsers might also request additional data from servers later via
+          subsequent <strong>GET</strong> or <strong>POST</strong> requests
+        </li>
+      </ul>
+      <img src="./assets/request-response.png" width="600" />
+
+      <hr />
+      <h2 id="html-basics">HTML basics</h2>
+      <p>
+        HTML (Hyper Text Markup Language) is used to express text in a
+        structured way. HTML tags indicate what kind of element is displayed on
+        the website. For example, a headline is written like this:
+      </p>
+      <pre><code class="language-html">&lt;h1&gt;I am a headline!&lt;/h1&gt;
+</code></pre>
+      <p>
+        The content considered as headline is wrapped within an
+        <strong>opening tag</strong> and a <strong>closing tag</strong>. The
+        whole thing is called an <strong>element</strong>.
+      </p>
+      <p>
+        Elements are nested into each other to create structure and hierarchy.
+      </p>
+      <pre><code class="language-html">&lt;h1&gt;I am a &lt;em&gt;headline!&lt;/em&gt;&lt;/h1&gt;
+</code></pre>
+      <p>
+        Some elements can&#39;t contain any other elements and therefore
+        don&#39;t have a closing tag. They are self-closing and called
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Glossary/Empty_element"
+          ><em>empty elements</em></a
+        >.
+      </p>
+      <pre><code class="language-html">&lt;hr /&gt;
+or
+&lt;br /&gt;
+</code></pre>
+      <h3 id="html-tag-attributes">HTML tag attributes</h3>
+      <p>
+        Some elements require some more information in order to work properly.
+        This information is specified via attributes, for example:
+      </p>
+      <ul>
+        <li>
+          the source of an image
+          <pre><code class="language-html">&lt;img src=&quot;logo.png&quot; alt=&quot;The logo of the company.&quot; /&gt;
+</code></pre>
+        </li>
+        <li>
+          the destination of an anchor element
+          <pre><code class="language-html">&lt;a href=&quot;https://example.com&quot;&gt; click me &lt;/a&gt;
+</code></pre>
+        </li>
+        <li>
+          the type of an input element
+          <pre><code class="language-html">&lt;input type=&quot;date&quot; /&gt;
+</code></pre>
+        </li>
+      </ul>
+      <blockquote>
+        <p>
+          💡 The
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
+            >MDN web docs</a
+          >
+          contain detailed information about elements and corresponding
+          attributes.
+        </p>
+      </blockquote>
+      <h3 id="layout-of-an-html-file">Layout of an HTML file</h3>
+      <p>
+        Every HTML document starts with a
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype"
+          >doctype</a
+        >
+        followed by the <code>&lt;html&gt;</code> element, which consists of two
+        main parts:
+      </p>
+      <ul>
+        <li>
+          The <code>&lt;head&gt;</code> contains important meta information for
+          the browser like
+          <ul>
+            <li>the charset (utf-8)</li>
+            <li>the favicon displayed in the tab</li>
+            <li>the title of the website</li>
+            <li>CSS and JavaScript files needed for the website</li>
+          </ul>
+        </li>
+        <li>
+          The <code>&lt;body&gt;</code> contains the visible content of the
+          website structured by html elements
+        </li>
+      </ul>
+      <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    … meta information, additional links to CSS / JavaScript files …
+  &lt;/head&gt;
+  &lt;body&gt;
+    … elements displayed on the web page …
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <h3 id="list-of-common-html-elements">List of common HTML elements</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>element</th>
+            <th>meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;head&gt;&lt;/head&gt;</code></td>
+            <td>only once per website, includes meta data and linked files</td>
+          </tr>
+          <tr>
+            <td><code>&lt;body&gt;&lt;/body&gt;</code></td>
+            <td>only once per website, includes the html website content</td>
+          </tr>
+          <tr>
+            <td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
+            <td>only once per website, a level one heading</td>
+          </tr>
+          <tr>
+            <td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
+            <td>a level two heading</td>
+          </tr>
+          <tr>
+            <td><code>&lt;p&gt;&lt;/p&gt;</code></td>
+            <td>a paragraph</td>
+          </tr>
+          <tr>
+            <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+            <td>an anchor (link)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;img&gt;</code></td>
+            <td>an image (self-closing / empty)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;form&gt;&lt;/form&gt;</code></td>
+            <td>a form element</td>
+          </tr>
+          <tr>
+            <td><code>&lt;input&gt;</code></td>
+            <td>an input field (self-closing / empty)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;button&gt;&lt;/button&gt;</code></td>
+            <td>
+              a clickable element equipped with some kind of functionality
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>
+          💡 A comprehensive
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics"
+            >list of all html elements can be found at the MDN web docs</a
+          >.
+        </p>
+      </blockquote>
+      <hr />
+      <h2 id="structuring-a-website">Structuring a Website</h2>
+      <p>
+        Developers have two main tools to express a meaningful structure in a
+        website:
+      </p>
+      <ol>
+        <li>Using semantic HTML elements</li>
+        <li>Nesting / grouping of HTML elements</li>
+      </ol>
+      <h3 id="semantic-html">Semantic HTML</h3>
+      <p>
+        Semantic HTML elements not only divide the content of the web page into
+        distinct parts, but also describe the function or purpose of the
+        elements. This has two major benefits:
+      </p>
+      <ul>
+        <li>The HTML becomes more understandable for other developers</li>
+        <li>
+          Accessibility tools and search engines can interpret the website
+        </li>
+      </ul>
+      <p>Therefore, one should use semantic HTML elements whenever possible.</p>
+      <h3 id="list-of-semantic-html-elements">
+        List of Semantic HTML elements
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th>element</th>
+            <th>meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;main&gt;&lt;/main&gt;</code></td>
+            <td>
+              only once per website, includes the main content of the page
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;section&gt;&lt;/section&gt;</code></td>
+            <td>a generic standalone section of a document</td>
+          </tr>
+          <tr>
+            <td>
+              <code>&lt;ul&gt;&lt;/ul&gt;</code>/<code
+                >&lt;ol&gt;&lt;/ol&gt;</code
+              >
+            </td>
+            <td>
+              a list of elements with the same structure, only has
+              <code>&lt;li&gt;</code> elements as direct children
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;nav&gt;&lt;/nav&gt;</code></td>
+            <td>a navigation bar</td>
+          </tr>
+          <tr>
+            <td><code>&lt;aside&gt;&lt;/aside&gt;</code></td>
+            <td>
+              element representing a portion of a document whose content is only
+              indirectly related to the main content
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;article&gt;&lt;/article&gt;</code></td>
+            <td>
+              representing a self-containing part of the website, which is
+              intended to be independently distributable or reusable
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;header&gt;&lt;/header&gt;</code></td>
+            <td>
+              representing introductory content, typically a group of
+              introductory or navigational aids
+            </td>
+          </tr>
+          <tr>
+            <td><code>&lt;footer&gt;&lt;/footer&gt;</code></td>
+            <td>
+              typically contains information about the author of the section,
+              copyright data or links to related documents
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>
+          💡 You can find a comprehensive
+          <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            >list of semantic html elements in the MDN web docs</a
+          >.
+        </p>
+      </blockquote>
+      <h3 id="nesting-html-elements">Nesting HTML elements</h3>
+      <p>
+        Nesting groups elements together in a meaningful way. The element
+        containing the other elements is called the
+        <strong>parent element</strong>, which contains one or more
+        <strong>child elements</strong>.
+      </p>
+      <p>The following cases are typical examples of nested elements:</p>
+      <ul>
+        <li>
+          <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;first item&lt;/li&gt;
+  &lt;li&gt;second item&lt;/li&gt;
+  &lt;li&gt;third item&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+        </li>
+        <li>
+          <pre><code class="language-html">&lt;article&gt;
+  &lt;h2&gt;Some headline&lt;/h2&gt;
+  &lt;p&gt;I am a paragraph…&lt;/p&gt;
+  &lt;a href=&quot;https://www.github.com&quot;&gt;a link to another website&lt;/a&gt;
+&lt;/article&gt;
+</code></pre>
+        </li>
+        <li>
+          <pre><code class="language-html">&lt;button&gt;
+  &lt;img src=&quot;arrow.svg&quot; /&gt;
+  &lt;span&gt; submit &lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+        </li>
+      </ul>
+      <p>
+        Below is a sketch of how semantic elements can be nested in a web
+        page.<br /><br />
+        <img src="./assets/sectioning-elements.png" width="700" />
+      </p>
+      <h2 id="emmet">Emmet</h2>
+      <p>
+        Visual Studio Code has a useful tool called Emmet which lets you
+        autocomplete a lot of code by just typing certain snippets and pressing
+        the <kbd>Tab</kbd> key afterwards. Try these snippets inside an HTML
+        file and see what happens:
+      </p>
+      <ul>
+        <li><code>!</code></li>
+        <li><code>.highlight</code></li>
+        <li><code>button#red</code></li>
+        <li><code>ul&gt;li.card\*10</code></li>
+      </ul>
+      <blockquote>
+        <p>
+          💡 You can learn about more Emmet commands in
+          <a href="https://docs.emmet.io/cheat-sheet/">this cheat-sheet</a>
+        </p>
+      </blockquote>
+      <hr />
+      <h2 id="resources-1">Resources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            >MDN: Introduction to HTML</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+            >MDN: Getting started with HTML</a
+          >
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+            >MDN: HTML Elements</a
+          >
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            >MDN: Semantic elements: Glossary</a
+          >
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
+            >MDN: HTML attributes</a
+          >
+        </li>
+      </ul>
+      <hr />
+      <hr />
+      <h1 id="css-basics">CSS Basics</h1>
+      <h2 id="learning-objectives-2">Learning Objectives</h2>
+      <ul>
+        <li>
+          <input disabled="" type="checkbox" /> having a general understanding
+          of the purpose of CSS
+        </li>
+        <li>
+          <input disabled="" type="checkbox" /> knowing what Cascading Style
+          Sheets means
+        </li>
+        <li>
+          <input disabled="" type="checkbox" /> understanding the fundamentals
+          of CSS: CSS syntax, selectors, box model, inline &amp; block elements
+        </li>
+        <li>
+          <input disabled="" type="checkbox" /> linking stylesheets to the HTML
+          document
+        </li>
+      </ul>
+      <h2 id="what-is-css">What is CSS?</h2>
+      <p>
+        With CSS (<em>Cascading Stylesheets</em>) you can add styling to your
+        HTML elements.
+      </p>
+      <p>
+        <img
+          src="assets/animated-gif-for-comparison.gif"
+          alt="Comparison of HTML, CSS and JavaScript"
+        />
+      </p>
+      <p>
+        The term <em>cascading</em> in CSS refers to an algorithm that resolves
+        conflicts when multiple styles are defined for a particular element.
+        When deciding which style to apply, CSS takes into account three key
+        factors: specificity, source order, and inheritance.
+      </p>
+      <ul>
+        <li>
+          <p>
+            Specificity refers to how precisely a selector targets an element.
+            Styles with higher specificity take precedence over those with lower
+            specificity.
+          </p>
+        </li>
+        <li>
+          <p>
+            The source order of styles also plays a role in determining which
+            style should be applied. When multiple styles with the same
+            specificity are defined, the style that appears last in the
+            stylesheet will override any previous styles for that element.
+          </p>
+        </li>
+        <li>
+          <p>
+            Additionally, CSS allows styles to be inherited from parent elements
+            to their child elements. This means that certain styles can be
+            passed down through the document tree, affecting multiple elements
+            simultaneously.
+          </p>
+        </li>
+      </ul>
+      <p>
+        The term <em>stylesheet</em> refers to a collection of rulesets declared
+        using CSS, usally within a <code>.css</code> file.
+      </p>
+      <h2 id="linking-stylesheets">Linking Stylesheets</h2>
+      <p>
+        To separate your HTML and CSS code, you can create a new file, like
+        <code>css/styles.css</code> and link it to your HTML file by placing a
+        <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> of your
+        HTML document.
+      </p>
+      <pre><code class="language-html">&lt;head&gt;
+  …
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/styles.css&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+      <h2 id="css-syntax">CSS syntax</h2>
+      <p>
+        Any stylesheet consists of a collection of <strong>ruleset</strong>s. A
+        ruleset consists of four parts:
+      </p>
+      <p><img src="assets/css-syntax.png" alt="CSS syntax" /></p>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Selector</td>
+            <td>
+              Selects to which elements the style declarations are applied,
+              followed by curly braces (<code>{}</code>) enclosing the
+              declarations
+            </td>
+          </tr>
+          <tr>
+            <td>Declaration</td>
+            <td>
+              A combination of a property and a property value, separated by a
+              colon (<code>:</code>) and ending with a semicolon
+              (<code>;</code>)
+            </td>
+          </tr>
+          <tr>
+            <td>Property</td>
+            <td>
+              The property you want to style, e.g. <code>color</code>,
+              <code>font-size</code>, <code>text-align</code>
+            </td>
+          </tr>
+          <tr>
+            <td>Property Value</td>
+            <td>
+              The value assigned to the property, e.g <code>blue</code> for the
+              <code>color</code> property, <code>3rem</code> for the
+              <code>font-size</code> property
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>A ruleset can have multiple declarations:</p>
+      <pre><code class="language-css">h1 {
+  color: blue;
+  font-size: 3rem;
+  text-align: center;
+}
+</code></pre>
+      <h2 id="selectors">Selectors</h2>
+      <p>
+        There are different CSS selectors you can use to select elements to
+        which you want to apply styles.
+      </p>
+      <h3 id="type-selector">Type selector</h3>
+      <p>The type selector selects all elements of a specific element type.</p>
+      <p>
+        <strong>Syntax</strong>: <code>article</code>, <code>h1</code>,
+        <code>p</code>, <code>div</code>, <code>a</code>, <code>input</code>,
+        <code>button</code>, …
+      </p>
+      <p><strong>Example</strong>:</p>
+      <p>Select all <code>article</code> elements.</p>
+      <pre><code class="language-css">article {
+  color: red;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;article&gt;…&lt;/article&gt;
+</code></pre>
+      <h3 id="class-selector">Class selector</h3>
+      <p>
+        The class selector selects all elements that have the specified class.
+      </p>
+      <p>
+        <strong>Syntax</strong>: <code>.superpink</code> (the user defined class
+        name from the HTML but starting with a dot <code>.</code>)
+      </p>
+      <p><strong>Example</strong>:</p>
+      <p>Select all elements with the class <code>superpink</code>.</p>
+      <pre><code class="language-css">.superpink {
+  color: hotpink;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;aside class=&quot;superpink&quot;&gt;…&lt;/aside&gt;
+</code></pre>
+      <p>
+        HTML elements can have multiple classes separated by a space. The
+        selector <code>.superpink</code> would also select the following
+        element:
+      </p>
+      <pre><code class="language-html">&lt;aside class=&quot;broccoli superpink some-other-class&quot;&gt;…&lt;/aside&gt;
+</code></pre>
+      <p>The order of the classes in the HTML attribute doesn&#39;t matter.</p>
+      <h3 id="pseudo-classes">Pseudo-classes</h3>
+      <p>
+        The pseudo-class selector selects all elements that are in a specific
+        state. It is used in combination with other selectors.
+      </p>
+      <p>
+        <strong>Syntax</strong>: <code>:hover</code>, <code>:focus</code>, …
+        (the pseudo-class name starting with a colon <code>:</code>)
+      </p>
+      <h4 id="hover"><code>:hover</code></h4>
+      <p>Selects an element when you hover over it with the mouse.</p>
+      <p><strong>Example</strong>:</p>
+      <p>Select all hovered links.</p>
+      <pre><code class="language-css">a:hover {
+  color: hotpink;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;a href=&quot;https://www.neuefische.de&quot;&gt;neuefische&lt;/a&gt;
+</code></pre>
+      <h4 id="focus"><code>:focus</code></h4>
+      <p>
+        Selects an element when it is focused. This is usually the case when you
+        click into an input field or select an element with the tab key.
+      </p>
+      <p><strong>Example</strong>:</p>
+      <p>Select all focused input fields.</p>
+      <pre><code class="language-css">input:focus {
+  border: 1px solid hotpink;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;input type=&quot;text&quot; /&gt;
+</code></pre>
+      <h4 id="other-pseudo-classes">Other pseudo-classes</h4>
+      <p>
+        There are many more pseudo-classes like <code>:active</code>,
+        <code>:first-child</code>, <code>:last-child</code>,
+        <code>:first-of-type</code>, <code>:last-of-type</code>,
+        <code>:nth-child()</code>, <code>:nth-of-type()</code>,
+        <code>:not()</code>, …
+      </p>
+      <blockquote>
+        <p>
+          📙 You can find a list of all
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+            ><strong>Pseudo-classes</strong> on mdn</a
+          >.
+        </p>
+      </blockquote>
+      <h3 id="attribute-selectors">Attribute selectors</h3>
+      <p>
+        The attribute selector selects all elements based on the presence or
+        value of a given attribute.
+      </p>
+      <h4 id="basic-attribute-selector">Basic attribute selector</h4>
+      <p>Selects all elements with the specified attribute.</p>
+      <p>
+        <strong>Syntax</strong>: <code>[attribute]</code> (attribute name in
+        square brakets <code>[]</code>)
+      </p>
+      <p><strong>Example</strong>:</p>
+      <p>Select all elements that have a <code>type</code> attribute.</p>
+      <pre><code class="language-css">[type] {
+  border: 1px solid hotpink;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;input type=&quot;text&quot; /&gt;
+</code></pre>
+      <h4 id="attribute-value-selector">Attribute value selector</h4>
+      <p>Selects all elements with the specified attribute and value.</p>
+      <p>
+        <strong>Syntax</strong>:
+        <code>[attribute=&quot;value&quot;]</code> (attribute name followed by
+        <code>=</code> and the attribute value in quotation marks
+        <code>&quot;&quot;</code> — all in square brakets <code>[]</code>)
+      </p>
+      <p><strong>Example</strong>:</p>
+      <p>
+        Select all elements that have a <code>type</code> attribute with the
+        value <code>text</code>.
+      </p>
+      <pre><code class="language-css">[type=&quot;text&quot;] {
+  border: 1px solid hotpink;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;input type=&quot;text&quot; /&gt;
+</code></pre>
+      <h4 id="advanced-attribute-selectors">Advanced attribute selectors</h4>
+      <p>
+        With advanced attribute selectors you can also select elements that have
+        an attribute with a specific value at the beginning, end or in the
+        middle of the value.
+      </p>
+      <blockquote>
+        <p>
+          📙 You can find more information about
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors"
+            ><strong>Attribute selectors</strong> on the mdn</a
+          >.
+        </p>
+      </blockquote>
+      <h3 id="universal-selector">Universal selector</h3>
+      <p>
+        The universal selector <code>*</code> selects all elements in the
+        document.
+      </p>
+      <p><strong>Syntax</strong>: <code>*</code></p>
+      <p><strong>Example</strong>:</p>
+      <p>Select all elements.</p>
+      <pre><code class="language-css">* {
+  border: 1px solid hotpink;
+}
+</code></pre>
+      <blockquote>
+        <p>
+          ❗️ The universal selector is rarely used for anything but resets. Do
+          not use it unless you know what you are doing.
+        </p>
+      </blockquote>
+      <h2 id="combining-selectors">Combining Selectors</h2>
+      <p>
+        Combinators are used to combine multiple selectors to create a new
+        selector.
+      </p>
+      <h3 id="combine-multiple-selectors-with-a-comma">
+        Combine multiple selectors with a comma
+      </h3>
+      <p>
+        You can combine multiple selectors with a comma to create a new selector
+        that selects all elements that are selected by
+        <strong>any one</strong> of the selectors.
+      </p>
+      <p><strong>Syntax</strong>: <code>selector1, selector2, …</code></p>
+      <p><strong>Example</strong>:</p>
+      <p>
+        Select all <code>h1</code>, <code>h2</code> and
+        <code>h3</code> elements.
+      </p>
+      <pre><code class="language-css">h1,
+h2,
+h3 {
+  color: hotpink;
+}
+</code></pre>
+      <h3 id="descendant-combinator">Descendant combinator</h3>
+      <p>
+        The descendant combinator <code> </code> (space) selects all elements
+        that are descendants (children) of another selector.
+      </p>
+      <p><strong>Syntax</strong>: <code>selector1 selector2 …</code></p>
+      <p><strong>Example</strong>:</p>
+      <p>
+        Select all <code>.superpink</code> elements that are descendants of an
+        <code>article</code> element.
+      </p>
+      <pre><code class="language-css">article .superpink {
+  color: hotpink;
+}
+</code></pre>
+      <pre><code class="language-html">&lt;article&gt;
+  &lt;p class=&quot;superpink&quot;&gt;I am pink&lt;/p&gt;
+  &lt;p&gt;I am not pink&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;p class=&quot;superpink&quot;&gt;
+      I am pink, even though I am not a direct descendant of the article
+    &lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+&lt;p class=&quot;superpink&quot;&gt;
+  I am not pink because I am not a descendant of an article
+&lt;/p&gt;
+</code></pre>
+      <h3 id="other-combinators">Other combinators</h3>
+      <p>
+        There are many more combinators like the direct descendant combinator
+        <code>&gt;</code>, the adjacent sibling combinator <code>+</code> and
+        the general sibling combinator <code>~</code>. A good general rule is to
+        use combinators (except the comma to combine selectors) very sparingly
+        and only when necessary.
+      </p>
+      <blockquote>
+        <p>
+          📙 You can find more information about
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#combinators"
+            ><strong>Combinators</strong> on the mdn</a
+          >.
+        </p>
+      </blockquote>
+      <h2 id="css-properties">CSS Properties</h2>
+      <p>
+        There are a lot of CSS properties and you will discover new ones every
+        day. Therefore the following list shows only a few examples:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>color</code></td>
+            <td>Color of an elements text</td>
+          </tr>
+          <tr>
+            <td><code>font-size</code></td>
+            <td>Defines the size of a font</td>
+          </tr>
+          <tr>
+            <td><code>text-align</code></td>
+            <td>Defines the alignment of text</td>
+          </tr>
+          <tr>
+            <td><code>background-color</code></td>
+            <td>Background color of an element</td>
+          </tr>
+          <tr>
+            <td><code>border</code></td>
+            <td>Defines the border of an element.</td>
+          </tr>
+          <tr>
+            <td><code>padding</code></td>
+            <td>Defines the padding of an element.</td>
+          </tr>
+          <tr>
+            <td><code>margin</code></td>
+            <td>Defines the margin of an element.</td>
+          </tr>
+          <tr>
+            <td><code>width</code></td>
+            <td>This property defines the width of an element.</td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>
+          📙 You can find more properties in the
+          <a href="https://css-tricks.com/almanac/properties/"
+            >alphabetic list of <strong>Properties</strong> on CSS-Tricks</a
+          >
+          or in the
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index"
+            ><strong>Index</strong> of properties, pseudo-classes,
+            pseudo-elements, data types, functional notations and at-rules on
+            the mdn</a
+          >.
+        </p>
+      </blockquote>
+      <h2 id="inheritance">Inheritance</h2>
+      <p>
+        Some CSS properties are inherited from the parent element to the child
+        element. This means that the child element inherits the value of the
+        property from the parent element if it is not set explicitly.
+      </p>
+      <p><strong>Example</strong>:</p>
+      <pre><code class="language-css">body {
+  color: hotpink;
+}
+
+p {
+  /* The color of the paragraph is hotpink because it is inherited from the body */
+}
+</code></pre>
+      <pre><code class="language-html">&lt;body&gt;
+  &lt;p&gt;I am hotpink&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+      <p>
+        This is very useful for properties like <code>color</code> or
+        <code>font-family</code> because you can set them on any element and all
+        child elements will inherit the value.
+      </p>
+      <blockquote>
+        <p>
+          📙 You can find more information about
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance"
+            ><strong>Inheritance</strong> on the mdn</a
+          >.
+        </p>
+      </blockquote>
+      <h2 id="box-model">Box Model</h2>
+      <p>
+        All elements of a website are rectangular boxes described by the
+        <strong>box model</strong>. Each of those boxes has four areas: content,
+        padding, border and margin.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Box model part</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>margin</td>
+            <td>
+              The outer space measured from the border to other elements on the
+              page
+            </td>
+          </tr>
+          <tr>
+            <td>border</td>
+            <td>The border of the element</td>
+          </tr>
+          <tr>
+            <td>padding</td>
+            <td>
+              The inner space between the content and the border of the element
+            </td>
+          </tr>
+          <tr>
+            <td>content</td>
+            <td>The actual content box of the element</td>
+          </tr>
+        </tbody>
+      </table>
+      <img
+        src="./assets/box-model.excalidraw.png"
+        width="500"
+        alt="A chart describing the different boxes making up the box model"
+      />
+
+      <p>
+        The browser knows two ways to calculate the size (<code>width</code> and
+        <code>height</code>) of an element in this model:
+        <code>content-box</code> (the default, old) and
+        <code>border-box</code> (the modern variant).
+      </p>
+      <p>
+        In <code>content-box</code> mode, <code>width</code> and
+        <code>height</code> only describe the size of the content box: The
+        padding and border are added to the size of the element. This can be
+        confusing and lead to unexpected results.
+      </p>
+      <p>
+        We can set the <code>box-sizing</code> property to
+        <code>border-box</code> for all elements (using the universal selector)
+        to make the <code>width</code> and <code>height</code> of an element
+        include the padding and border box.
+      </p>
+      <pre><code class="language-css">* {
+  box-sizing: border-box;
+}
+</code></pre>
+      <p>
+        Now, the <code>width</code> property defines the size of the border box,
+        padding and border width are subtracted to calculate the available space
+        for the content. This code will be in all used in all future projects to
+        set a sensible default.
+      </p>
+      <img
+        src="./assets/box-model-border-box-vs-content-box.excalidraw.png"
+        width="768"
+        alt="A chart describing the different boxes making up the box model"
+      />
+
+      <blockquote>
+        <p>
+          💡 The CSS Working Group (which produces the specification for CSS)
+          keeps an
+          <a href="https://wiki.csswg.org/ideas/mistakes"
+            ><strong
+              >Incomplete List of Mistakes in the Design of CSS</strong
+            ></a
+          >, saying that <code>box-sizing: border-box</code> should have been
+          the default from the start.
+        </p>
+        <p>
+          It is not possible to change the default behavior of
+          <code>box-sizing</code> in the specification and in browsers (or fix
+          any of the other &quot;mistakes&quot;), because it would break many
+          websites that rely on the current behavior.
+        </p>
+      </blockquote>
+      <h2 id="inline-and-block-elements">Inline and block elements</h2>
+      <p>
+        There are basically two types of elements: inline-level and block-level
+        elements.
+      </p>
+      <h3 id="inline-elements">Inline elements</h3>
+      <p>
+        Inline elements
+        <strong>are as wide as their maximum content width</strong> and
+        <strong>flow with the text lines</strong>. They start and end within a
+        line of text. Their box can be cut into multiple parts by line breaks.
+      </p>
+      <p>Common inline elements include:</p>
+      <ul>
+        <li><code>a</code></li>
+        <li><code>span</code></li>
+        <li><code>strong</code></li>
+        <li><code>em</code></li>
+        <li><code>img</code></li>
+        <li><code>input</code></li>
+        <li><code>button</code></li>
+        <li>…</li>
+      </ul>
+      <h3 id="block-elements">Block elements</h3>
+      <p>
+        Block elements
+        <strong>take up the full width of their parent element</strong> and
+        <strong>always start on a new line</strong>.
+      </p>
+      <p>Common block elements are:</p>
+      <ul>
+        <li><code>p</code></li>
+        <li><code>h1</code> - <code>h6</code></li>
+        <li><code>div</code></li>
+        <li><code>section</code></li>
+        <li><code>article</code></li>
+        <li><code>header</code></li>
+        <li><code>footer</code></li>
+        <li><code>nav</code></li>
+        <li>…</li>
+      </ul>
+      <h3 id="example">Example</h3>
+      <p>
+        In the following example, the <code>h2</code> and
+        <code>p</code> elements are block-level elements. The
+        <code>a</code> element is an inline-level element.
+      </p>
+      <pre><code class="language-html">&lt;h2&gt;Coding Bootcamp&lt;/h2&gt;
+&lt;p&gt;
+  If you want to participate in a bootcamp, visit
+  &lt;a href=&quot;https://www.neuefische.de&quot;&gt;neuefische.de&lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+      <h3 id="display-property">Display property</h3>
+      <p>
+        You can change the default behavior by using the CSS
+        <code>display</code> property.
+      </p>
+      <pre><code class="language-css">h2 {
+  display: inline;
+}
+</code></pre>
+      <p>
+        This will make all <code>h2</code> elements behave like an inline
+        elements. The same works the other way around:
+      </p>
+      <pre><code class="language-css">a {
+  display: block;
+}
+</code></pre>
+      <p>
+        This will make all <code>a</code> elements behave like a block elements.
+      </p>
+      <h2 id="resources-2">Resources</h2>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            >CSS on the mdn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+            >CSS first steps on the mdn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#combinators"
+            >Combinators on the mdn</a
+          >
+        </li>
+        <li>
+          <a href="https://css-tricks.com/almanac/properties/"
+            >Alphabetic List of Properties on CSS-Tricks</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index"
+            >Index of properties, pseudo-classes, pseudo-elements, data types,
+            functional notations and at-rules on the mdn</a
+          >
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance"
+            >Inheritance on the mdn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text"
+            >CSS styling text on the mdn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing?retiredLocale=de"
+            >box-sizing on the mdn</a
+          >
+        </li>
+        <li>
+          <a href="https://wiki.csswg.org/ideas/mistakes"
+            >Incomplete List of Mistakes in the Design of CSS on the CSS Working
+            Group Wiki</a
+          >
+        </li>
+      </ul>
+      <hr />
+      <hr />
+      <h1 id="css-flexbox">CSS Flexbox</h1>
+      <h2 id="learning-objectives-3">Learning Objectives</h2>
+      <ul>
+        <li>
+          understanding the purpose of flexbox:
+          <ul>
+            <li>
+              letting items fill out the possible space in their container
+            </li>
+            <li>distributing elements for different screen sizes</li>
+            <li>making the website more responsive with flexbox</li>
+          </ul>
+        </li>
+        <li>understanding the most important flexbox properties</li>
+        <li>
+          knowing the difference between <strong>main-axis</strong> and
+          <strong>cross-axis</strong>
+        </li>
+      </ul>
+      <hr />
+      <h2 id="flexbox">Flexbox</h2>
+      <p>
+        Flexbox is a powerful CSS tool to layout your HTML elements, especially
+        when you want to align elements horizontally. It is defined on a
+        container element, containing multiple elements whose position will be
+        determined by the flexbox rules. You define it as follows:
+      </p>
+      <pre><code class="language-css">.container-element {
+  display: flex;
+}
+</code></pre>
+      <p>Flexbox does the following:</p>
+      <ul>
+        <li>
+          All child elements will be displayed next to each other along the main
+          axis, the horizontal axis by default. The perpendicular axis is called
+          cross axis.
+        </li>
+        <li>
+          If the width of all child elements exceeds the container&#39;s width,
+          the child elements will be shrunk such that they all fit into the
+          available space.
+        </li>
+      </ul>
+      <p>
+        This behavior can be modified to achieve some very useful layouts. The
+        most important flex properties are listed in the following table.
+      </p>
+      <hr />
+      <h2 id="important-flex-properties">Important Flex Properties</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>property</th>
+            <th>effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content"
+                >justify-content</a
+              >
+            </td>
+            <td>
+              Defines the positioning of elements along the main axis. Useful
+              values: <code>flex-start</code>, <code>flex-end</code>,
+              <code>center</code> , <code>space-between</code>,
+              <code>space-evenly</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items"
+                >align-items</a
+              >
+            </td>
+            <td>
+              Defines the positioning of elements along the cross axis. Useful
+              values: <code>flex-start</code>, <code>flex-end</code>,
+              <code>center</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap"
+                >gap</a
+              >
+            </td>
+            <td>Defines the minimum spacing between elements.</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction"
+                >flex-direction</a
+              >
+            </td>
+            <td>
+              Sets the direction of the main axis. Useful values:
+              <code>row</code>, <code>column</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap"
+                >flex-wrap</a
+              >
+            </td>
+            <td>
+              Modifies how elements can wrap into another row instead of being
+              squashed into one row. Useful values: <code>wrap</code>,
+              <code>no-wrap</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        <p>
+          💡
+          <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+            >This very detailed cheatsheet</a
+          >
+          includes everything you will ever need when working with flexbox.
+        </p>
+      </blockquote>
+      <hr />
+      <h2 id="flex-direction">Flex-direction</h2>
+      <p>
+        This very fundamental property lets you define which axis should act as
+        main axis. In this picture you can see its effect.
+      </p>
+      <p><img src="assets/flex-direction.png" alt="flex-direction" /></p>
+      <p>
+        As you can see it changes the layout completely. Also notice, that the
+        property <code>align-items</code>, which defines the positioning on the
+        cross axis, also changes with the definition of the flex-direction.
+      </p>
+      <hr />
+      <h2 id="flex-wrap">Flex-wrap</h2>
+      <p>
+        This property is very useful for creating responsive layouts. With the
+        property set to <code>flex-wrap: wrap</code> the elements flow into the
+        next row when they wouldn&#39;t fit into the current row. Depending on
+        the screen width, the content can align itself, as shown in the
+        following example.
+      </p>
+      <p><img src="assets/flex-wrap.png" alt="flex-wrap" /></p>
+      <hr />
+      <h3 id="css-grid-layout">CSS Grid Layout</h3>
+      <p>
+        CSS Grid is another powerful tool to layout your HTML elements. While
+        flexbox excels at laying out elements in one dimension (if you ignore
+        wrapped items), CSS Grid is used to layout elements in two dimensions.
+      </p>
+      <blockquote>
+        <p>
+          📑 Learn more about
+          <a href="./assets/css-grid.md"
+            ><strong>CSS Grid Layout</strong> in the document we prepared</a
+          >.
+        </p>
+      </blockquote>
+      <hr />
+      <h2 id="resources-3">Resources</h2>
+      <ul>
+        <li>
+          <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+            >Flexbox Cheat Sheet</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
+            >MDN web docs: Flexbox</a
+          >
+        </li>
+        <li><a href="https://cssbattle.dev/">CSS Battle</a></li>
+        <li><a href="./assets/css-grid.md">📑 CSS Grid Layout document</a></li>
+        <li>
+          <a href="https://the-echoplex.net/flexyboxes/">Flexbox playground</a>
+        </li>
+      </ul>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
